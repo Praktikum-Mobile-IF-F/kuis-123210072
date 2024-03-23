@@ -29,16 +29,19 @@ class TopAlbumPage extends StatelessWidget {
           ),
         ],
       ),
-      body: GridView.builder(
-        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 2,
+      body: Padding(
+        padding: const EdgeInsets.all(4.0),
+        child: GridView.builder(
+          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: 2,
+          ),
+          itemBuilder: (context, index) {
+            return MyItem(
+              topAlbum: topAlbumList[index],
+            );
+          },
+          itemCount: topAlbumList.length,
         ),
-        itemBuilder: (context, index) {
-          return MyItem(
-            topAlbum: topAlbumList[index],
-          );
-        },
-        itemCount: topAlbumList.length,
       ),
     );
   }

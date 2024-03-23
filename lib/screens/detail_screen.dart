@@ -26,7 +26,7 @@ class _DetailPageState extends State<DetailPage> {
             onPressed: () {
               _launchURL(widget.topAlbum.albumurl);
             },
-            icon: Icon(Icons.share),
+            icon: const Icon(Icons.share),
             tooltip: 'Open Spotify in Browser',
           ),
         ],
@@ -62,26 +62,30 @@ class _DetailPageState extends State<DetailPage> {
                     padding: const EdgeInsets.symmetric(
                         vertical: 5.0, horizontal: 30.0),
                     child: Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 0.0, horizontal: 20),
+                      padding: const EdgeInsets.symmetric(vertical: 0.0, horizontal: 24),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Icon(Icons.calendar_month_outlined),
-                          Text(
-                            widget.topAlbum.firstEntryDate,
-                            style: const TextStyle(fontSize: 16),
+                          const Icon(Icons.calendar_month_outlined),
+                          Expanded(
+                            child: Text(
+                              widget.topAlbum.firstEntryDate,
+                              style: const TextStyle(fontSize: 16),
+                              textAlign: TextAlign.center,
+                            ),
+                          ),
+                          const Text(
+                            "| ",
+                            style: TextStyle(fontSize: 16),
                             textAlign: TextAlign.center,
                           ),
-                          Text(
-                            "|",
-                            style: const TextStyle(fontSize: 16),
-                            textAlign: TextAlign.center,
-                          ),
-                          Icon(Icons.home_work_outlined),
-                          Text(
-                            widget.topAlbum.source,
-                            style: const TextStyle(fontSize: 16),
-                            textAlign: TextAlign.center,
+                          const Icon(Icons.home_work_outlined),
+                          Expanded(
+                            child: Text(
+                              widget.topAlbum.source,
+                              style: const TextStyle(fontSize: 16),
+                              textAlign: TextAlign.center,
+                            ),
                           ),
                         ],
                       ),
@@ -98,11 +102,11 @@ class _DetailPageState extends State<DetailPage> {
                       color: Colors.grey,
                       borderRadius: BorderRadius.circular(10)
                   ),
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
+                  child: const Padding(
+                    padding: EdgeInsets.all(8.0),
                     child: Text(
                       "Song List",
-                      style: const TextStyle(
+                      style: TextStyle(
                           color: Colors.white,
                         fontSize: 16,
                         fontWeight: FontWeight.bold,
@@ -121,7 +125,7 @@ class _DetailPageState extends State<DetailPage> {
                     padding: const EdgeInsets.symmetric(vertical: 6, horizontal: 40),
                     child: Container(
                       decoration: BoxDecoration(
-                          color: Color(0xFFF2EEF3FF),
+                          color: const Color(0xFFF2EEF3FF),
                         borderRadius: BorderRadius.circular(10),
                       ),
                       child: ListTile(
