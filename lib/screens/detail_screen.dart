@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:kuis072/models/top_album.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -69,25 +67,21 @@ class _DetailPageState extends State<DetailPage> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Icon(Icons.calendar_month_outlined),
-                          Expanded(
-                            child: Text(
-                              widget.topAlbum.firstEntryDate,
-                              style: const TextStyle(fontSize: 16),
-                              textAlign: TextAlign.center,
-                            ),
+                          Text(
+                            widget.topAlbum.firstEntryDate,
+                            style: const TextStyle(fontSize: 16),
+                            textAlign: TextAlign.center,
                           ),
                           Text(
-                            "| ",
+                            "|",
                             style: const TextStyle(fontSize: 16),
                             textAlign: TextAlign.center,
                           ),
                           Icon(Icons.home_work_outlined),
-                          Expanded(
-                            child: Text(
-                              widget.topAlbum.source,
-                              style: const TextStyle(fontSize: 16),
-                              textAlign: TextAlign.center,
-                            ),
+                          Text(
+                            widget.topAlbum.source,
+                            style: const TextStyle(fontSize: 16),
+                            textAlign: TextAlign.center,
                           ),
                         ],
                       ),
